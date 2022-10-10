@@ -1,27 +1,12 @@
-class WorkCategories {
-  final String title;
-  final String des;
+class NewWorkOut {
   final String imageDir;
 
-  WorkCategories(
-      {required this.title, required this.des, required this.imageDir});
+  NewWorkOut({required this.imageDir});
 }
 
-List<WorkCategories> getDataForWorkCatergoriesBeginner = [
-  WorkCategories(
-      title: 'Learn the basic of training',
-      des: '07:00 - 08:00 AM',
-      imageDir: 'assets/a.jpg'),
-  WorkCategories(
-      title: 'Learn the basic of training',
-      des: '07:00 - 08:00 AM',
-      imageDir: 'assets/a.jpg'),
-  WorkCategories(
-      title: 'Learn the basic of training',
-      des: '07:00 - 08:00 AM',
-      imageDir: 'assets/a.jpg'),
-  WorkCategories(
-      title: 'Learn the basic of training',
-      des: '07:00 - 08:00 AM',
-      imageDir: 'assets/a.jpg'),
+List<NewWorkOut> newWorkOutlist = [
+  NewWorkOut(imageDir: 'assets/c.jpg'),
+  NewWorkOut(imageDir: 'assets/j.jpg'),
+  NewWorkOut(imageDir: 'assets/b.jpg'),
+  NewWorkOut(imageDir: 'assets/e.jpg'),
 ];

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:plant_app_ui/mainscreen/homepage.dart';
 
 
 import 'package:plant_app_ui/style.dart';
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
               scaffoldBackgroundColor: kBackgroundColor,
               primarySwatch: Colors.blue,
               fontFamily: 'roboto'),
-          home: const WalkThrough(),
+          home: const HomePage(),
         );
       },
     );

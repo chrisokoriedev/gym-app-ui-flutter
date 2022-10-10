@@ -3,7 +3,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:plant_app_ui/registration/whatgender.dart';
 
-
 import 'widgets.dart';
 
 class WalkThrough extends StatefulWidget {
@@ -35,7 +34,7 @@ class _WalkThroughState extends State<WalkThrough> {
                 'assets/a.jpg', 'Meet your coach,', 'start your journey'),
             walthroughWidget(
                 'assets/d.jpg', 'Create a workout plan,', 'to stay fit'),
-            walthroughWidgetII('assets/c.jpg', 'Action is the,',
+            walthroughWidgetII('assets/f.jpg', 'Action is the,',
                 'key to all success', () => Get.to(const GenderScreen())),
           ],
         ),

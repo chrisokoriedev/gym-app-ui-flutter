@@ -30,7 +30,7 @@ class AuthScreen extends StatelessWidget {
                           height: 500.h,
                           decoration: const BoxDecoration(
                             image: DecorationImage(
-                                image: AssetImage('assets/a.jpg'),
+                                image: AssetImage('assets/h.jpg'),
                                 fit: BoxFit.cover),
                           ),
                           child: Padding(
@@ -101,7 +101,7 @@ class AuthScreen extends StatelessWidget {
                           height: Get.mediaQuery.size.height / 2,
                           decoration: const BoxDecoration(
                             image: DecorationImage(
-                                image: AssetImage('assets/b.jpg'),
+                                image: AssetImage('assets/d.jpg'),
                                 fit: BoxFit.cover),
                           ),
                           child: Padding(
@@ -115,7 +115,7 @@ class AuthScreen extends StatelessWidget {
                                     text: 'Hello ',
                                     style: TextStyle(
                                         color: kWhiteColor,
-                                        fontFamily: 'roboto', 
+                                        fontFamily: 'roboto',
                                         fontSize: 35.sp,
                                         fontWeight: FontWeight.w100),
                                     children: <TextSpan>[
@@ -205,8 +205,6 @@ class AuthScreen extends StatelessWidget {
                             ),
                           ]),
                     ),
-                  
-                  
                   ],
                 ),
               ],

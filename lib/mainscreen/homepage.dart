@@ -56,10 +56,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(
-                    'Today Workout Plan',
-                    style: TextStyle(fontSize: 20.sp),
-                  ),
+                  headerTextComponent('Today Workout Plan'),
                   Text(
                     'Mon 26 Apr',
                     style: TextStyle(color: kPrimaryColor, fontSize: 16.sp),
@@ -68,15 +65,12 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
               ),
               sizedHeight(20),
               mainComponentTraining('Day 01 - Warm Up', '07:00 - 08:00 AM',
-                  'assets/a.jpg', () {}),
+                  'assets/i.jpg', () {}),
               sizedHeight(30),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(
-                    'Workout Catergories',
-                    style: TextStyle(fontSize: 22.sp),
-                  ),
+                  headerTextComponent('Workout Catergories'),
                   TextButton(
                     onPressed: () {},
                     child: Text(
@@ -116,6 +110,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                       ]),
                 ),
               ),
+              sizedHeight(5),
               SizedBox(
                 height: 220,
                 child: TabBarView(controller: _tabController, children: [
@@ -124,10 +119,40 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                   workCatComponent(),
                 ]),
               ),
+              sizedHeight(20),
+              headerTextComponent('New Workout'),
+              sizedHeight(20),
+              SizedBox(
+                  width: double.infinity,
+                  height: 200,
+                  child: ListView.builder(
+                    itemCount: newWorkOutlist.length,
+                    scrollDirection: Axis.horizontal,
+                    itemBuilder: (context, int index) {
+                      final data = newWorkOutlist[index];
+                      return Container(
+                        width: 300.w,
+                        height: 200.h,
+                        margin: EdgeInsets.only(right: 20.sp),
+                        decoration: BoxDecoration(
+                            borderRadius: regularBorderRadius,
+                            image: DecorationImage(
+                                image: AssetImage(data.imageDir),
+                                fit: BoxFit.cover)),
+                      );
+                    },
+                  ))
             ],
           ),
         ),
       ),
+    );
+  }
+
+  Text headerTextComponent(String title) {
+    return Text(
+      title,
+      style: TextStyle(fontSize: 20.sp),
     );
   }
 }

@@ -305,22 +305,21 @@ mainComponentTrainingII(
   );
 }
 
-  SingleChildScrollView workCatComponent() {
-    return SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: Row(
-                    children: [
-                      mainComponentTrainingII('Learn the basic of training',
-                          '07:00 - 08:00 AM', 'assets/a.jpg', () {}),
-                      sizedWidth(20),
-                      mainComponentTrainingII('Day 01 - Warm Up',
-                          '07:00 - 08:00 AM', 'assets/a.jpg', () {}),
-                      sizedWidth(20),
-                      mainComponentTrainingII('Day 01 - Warm Up',
-                          '07:00 - 08:00 AM', 'assets/a.jpg', () {}),
-                      sizedWidth(20),
-                    ],
-                  ),
-                );
-  }
-
+SingleChildScrollView workCatComponent() {
+  return SingleChildScrollView(
+    scrollDirection: Axis.horizontal,
+    child: Row(
+      children: [
+        mainComponentTrainingII('Learn the basic of training',
+            '07:00 - 08:00 AM', 'assets/j.jpg', () {}),
+        sizedWidth(20),
+        mainComponentTrainingII(
+            'Day 01 - Warm Up', '07:00 - 08:00 AM', 'assets/e.jpg', () {}),
+        sizedWidth(20),
+        mainComponentTrainingII(
+            'Day 01 - Warm Up', '07:00 - 08:00 AM', 'assets/a.jpg', () {}),
+        sizedWidth(20),
+      ],
+    ),
+  );
+}
