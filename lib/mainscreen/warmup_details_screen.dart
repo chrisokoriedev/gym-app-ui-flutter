@@ -16,7 +16,7 @@ class WarmUpScreen extends StatelessWidget {
             height: Get.mediaQuery.size.height,
             decoration: const BoxDecoration(
                 image: DecorationImage(
-                    image: AssetImage('assets/k.jpg'), fit: BoxFit.cover)),
+                    image: AssetImage('assets/m.jpg'), fit: BoxFit.cover)),
             child: Padding(
               padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 50.h),
               child: Row(

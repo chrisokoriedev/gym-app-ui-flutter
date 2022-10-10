@@ -67,7 +67,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
               ),
               sizedHeight(20),
               mainComponentTraining('Day 01 - Warm Up', '07:00 - 08:00 AM',
-                  'assets/k.jpg', () => Get.to(const WarmUpScreen())),
+                  'assets/m.jpg', () => Get.to(const WarmUpScreen())),
               sizedHeight(30),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,

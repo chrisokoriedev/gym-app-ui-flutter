@@ -238,7 +238,10 @@ mainComponentTraining(
       padding: kDefaultPadding,
       decoration: BoxDecoration(
           borderRadius: regularBorderRadius,
-          image: DecorationImage(image: AssetImage(imgDir), fit: BoxFit.cover)),
+          image: DecorationImage(
+              image: AssetImage(imgDir),
+              fit: BoxFit.cover,
+              filterQuality: FilterQuality.high)),
       child: Column(
           mainAxisAlignment: MainAxisAlignment.end,
           crossAxisAlignment: CrossAxisAlignment.start,
