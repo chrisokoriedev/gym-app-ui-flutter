@@ -34,8 +34,8 @@ class _WalkThroughState extends State<WalkThrough> {
             walthroughWidget(
                 'assets/a.jpg', 'Meet your coach,', 'start your journey'),
             walthroughWidget(
-                'assets/b.jpg', 'Create a workout plan,', 'to stay fit'),
-            walthroughWidgetII('assets/b.jpg', 'Action is the,',
+                'assets/d.jpg', 'Create a workout plan,', 'to stay fit'),
+            walthroughWidgetII('assets/c.jpg', 'Action is the,',
                 'key to all success', () => Get.to(const GenderScreen())),
           ],
         ),
