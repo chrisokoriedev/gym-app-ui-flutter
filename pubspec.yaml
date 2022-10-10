@@ -17,7 +17,6 @@ dependencies:
   get:
   flutter_screenutil:
   smooth_page_indicator:
-  google_fonts:
   flutter_otp_text_field:
 
 
