@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import 'package:plant_app_ui/data/homelist.dart';
+import 'package:plant_app_ui/mainscreen/warmup_details_screen.dart';
 import 'package:plant_app_ui/style.dart';
 import 'package:plant_app_ui/widgets.dart';
 
@@ -65,7 +67,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
               ),
               sizedHeight(20),
               mainComponentTraining('Day 01 - Warm Up', '07:00 - 08:00 AM',
-                  'assets/i.jpg', () {}),
+                  'assets/k.jpg', () => Get.to(const WarmUpScreen())),
               sizedHeight(30),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
