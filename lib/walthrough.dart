@@ -27,7 +27,7 @@ class _WalkThroughState extends State<WalkThrough> {
       body: Container(
         padding: EdgeInsets.only(bottom: 80.sp),
         child: PageView(
-          physics: const BouncingScrollPhysics(),
+          physics: const ClampingScrollPhysics(),
           controller: controller,
           children: [
             walthroughWidget(

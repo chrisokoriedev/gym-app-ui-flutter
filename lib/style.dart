@@ -11,3 +11,4 @@ const kDarkBgColor = Color(0xff2c2c2e);
 const kGreyColor = Colors.grey;
 double screenWidth = Get.mediaQuery.size.width;
 final regularBorderRadius = BorderRadius.circular(20.r);
+final sideRadius = Radius.circular(0.r);
