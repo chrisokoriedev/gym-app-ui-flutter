@@ -12,3 +12,5 @@ const kGreyColor = Colors.grey;
 double screenWidth = Get.mediaQuery.size.width;
 final regularBorderRadius = BorderRadius.circular(20.r);
 final sideRadius = Radius.circular(0.r);
+final mediaQueryWidth = Get.mediaQuery.size.width;
+final mediaQueryHeight = Get.mediaQuery.size.height;

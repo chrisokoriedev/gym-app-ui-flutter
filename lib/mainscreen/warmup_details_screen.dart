@@ -79,15 +79,34 @@ class WarmUpScreen extends StatelessWidget {
                           'Simple Warm-up \nExercises', 'assets/g.jpg'),
                       sizedHeight(20),
                       otherWarmCompo(
-                          'Simple Warm-up \nExercises', 'assets/g.jpg'),
+                          'Simple Warm-up \nExercises', 'assets/i.jpg'),
+                      sizedHeight(50),
                     ],
                   ))
             ],
           ),
         ),
       ),
+      bottomSheet: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Container(
+              width: mediaQueryWidth * 0.7,
+              height: mediaQueryHeight * 0.1 - 30,
+              margin: EdgeInsets.symmetric(vertical: 10.h),
+              decoration: BoxDecoration(
+                color: kPrimaryColor,
+                borderRadius: regularBorderRadius,
+              ),
+              child: Center(
+                child: Text(
+                  'Start Workout',
+                  style:
+                      TextStyle(fontSize: 20.sp, fontWeight: FontWeight.w600),
+                ),
+              )),
+        ],
+      ),
     );
   }
-
-
 }

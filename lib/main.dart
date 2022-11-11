@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:plant_app_ui/mainscreen/homepage.dart';
-import 'package:plant_app_ui/mainscreen/warmup_details_screen.dart';
-
 import 'package:plant_app_ui/style.dart';
-
 import 'walthrough.dart';
 
 void main() {
@@ -26,8 +22,11 @@ class MyApp extends StatelessWidget {
               brightness: Brightness.dark,
               scaffoldBackgroundColor: kBackgroundColor,
               primarySwatch: Colors.blue,
+              bottomSheetTheme: BottomSheetThemeData(
+                  elevation: 0.0,
+                  backgroundColor: kBackgroundColor.withOpacity(0.3)),
               fontFamily: 'roboto'),
-          home: const HomePage(),
+          home: const WalkThrough(),
         );
       },
     );

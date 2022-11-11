@@ -51,7 +51,7 @@ walthroughWidgetII(
         clipper: NativeClipper(),
         child: Container(
           width: double.infinity,
-          height: 500.h,
+          height: 450.h,
           decoration: BoxDecoration(
               image: DecorationImage(
                   image: AssetImage(imgDir), fit: BoxFit.cover)),
@@ -327,73 +327,73 @@ SingleChildScrollView workCatComponent() {
   );
 }
 
-  pillComponent(IconData iconData, String title) {
-    return Container(
-      width: 90.w,
-      padding: EdgeInsets.symmetric(horizontal: 8.w, vertical: 5.h),
-      decoration:
-          BoxDecoration(color: kDarkBgColor, borderRadius: regularBorderRadius),
-      child: Row(
-        children: [
-          Icon(
-            iconData,
-            size: 20.sp,
-          ),
-          sizedWidth(5),
-          Text(title)
-        ],
-      ),
-    );
-  }
-  
-   otherWarmCompo(String title, String imgDir) {
-    return Container(
-      width: double.infinity,
-      decoration:
-          BoxDecoration(borderRadius: regularBorderRadius, color: kDarkBgColor),
-      child: Row(
-        children: [
-          Container(
-            width: Get.mediaQuery.size.width * 0.3,
-            height: 70.h,
-            decoration: BoxDecoration(
-                borderRadius: regularBorderRadius.copyWith(
-                    topRight: sideRadius, bottomRight: sideRadius),
-                color: kWhiteColor,
-                image: DecorationImage(
-                  image: AssetImage(imgDir),
-                  fit: BoxFit.cover,
-                )),
-          ),
-          sizedWidth(20),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                title,
-                style: TextStyle(
-                    fontSize: 17.sp,
-                    color: kWhiteColor,
-                    fontWeight: FontWeight.w600),
-              ),
-              sizedHeight(5),
-              Text(
-                '0:30',
-                style: TextStyle(
-                    color: kPrimaryColor,
-                    fontSize: 14.sp,
-                    fontWeight: FontWeight.w600),
-              )
-            ],
-          ),
-          sizedWidth(40),
-          Icon(
-            Icons.arrow_right_alt,
-            color: kGreyColor,
-            size: 20.sp,
-          ),
-          sizedWidth(20),
-        ],
-      ),
-    );
-  }
+pillComponent(IconData iconData, String title) {
+  return Container(
+    width: 90.w,
+    padding: EdgeInsets.symmetric(horizontal: 8.w, vertical: 5.h),
+    decoration:
+        BoxDecoration(color: kDarkBgColor, borderRadius: regularBorderRadius),
+    child: Row(
+      children: [
+        Icon(
+          iconData,
+          size: 20.sp,
+        ),
+        sizedWidth(5),
+        Text(title)
+      ],
+    ),
+  );
+}
+
+otherWarmCompo(String title, String imgDir) {
+  return Container(
+    width: double.infinity,
+    decoration:
+        BoxDecoration(borderRadius: regularBorderRadius, color: kDarkBgColor),
+    child: Row(
+      children: [
+        Container(
+          width: mediaQueryWidth * 0.3,
+          height: 85.h,
+          decoration: BoxDecoration(
+              borderRadius: regularBorderRadius.copyWith(
+                  topRight: sideRadius, bottomRight: sideRadius),
+              color: kWhiteColor,
+              image: DecorationImage(
+                image: AssetImage(imgDir),
+                fit: BoxFit.cover,
+              )),
+        ),
+        sizedWidth(20),
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              title,
+              style: TextStyle(
+                  fontSize: 17.sp,
+                  color: kWhiteColor,
+                  fontWeight: FontWeight.w600),
+            ),
+            sizedHeight(5),
+            Text(
+              '0:30',
+              style: TextStyle(
+                  color: kPrimaryColor,
+                  fontSize: 14.sp,
+                  fontWeight: FontWeight.w600),
+            )
+          ],
+        ),
+        sizedWidth(40),
+        Icon(
+          Icons.arrow_right_alt,
+          color: kGreyColor,
+          size: 20.sp,
+        ),
+        sizedWidth(20),
+      ],
+    ),
+  );
+}
