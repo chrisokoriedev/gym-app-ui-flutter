@@ -22,6 +22,7 @@ class _AddWeightScreenState extends State<AddWeightScreen> {
         padding: kDefaultPadding,
         child: Center(
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               sizedHeight(40),
               registrationHeader(

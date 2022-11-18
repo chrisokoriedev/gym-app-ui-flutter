@@ -27,10 +27,13 @@ class AuthScreen extends StatelessWidget {
                         clipper: NativeClipper(),
                         child: Container(
                           width: double.infinity,
-                          height: 500.h,
-                          decoration: const BoxDecoration(
+                          height: 450.h,
+                          decoration: BoxDecoration(
                             image: DecorationImage(
-                                image: AssetImage('assets/h.jpg'),
+                                colorFilter: ColorFilter.mode(
+                                    kDarkBgColor.withOpacity(0.5),
+                                    BlendMode.darken),
+                                image: const AssetImage('assets/h.jpg'),
                                 fit: BoxFit.cover),
                           ),
                           child: Padding(
@@ -43,7 +46,7 @@ class AuthScreen extends StatelessWidget {
                                   'Welcome back,',
                                   style: TextStyle(
                                       color: kWhiteColor,
-                                      fontSize: 45.sp,
+                                      fontSize: 30.sp,
                                       fontWeight: FontWeight.w100),
                                 ),
                               ],
@@ -56,7 +59,7 @@ class AuthScreen extends StatelessWidget {
                         child: Column(
                           children: [
                             inputComponent('Email'),
-                            sizedHeight(20),
+                            sizedHeight(10),
                             inputComponent('Password'),
                             sizedHeight(10),
                             Row(
@@ -92,97 +95,104 @@ class AuthScreen extends StatelessWidget {
                       ),
                     ],
                   ),
-                  Column(
-                    children: [
-                      ClipPath(
-                        clipper: NativeClipper(),
-                        child: Container(
-                          width: double.infinity,
-                          height: Get.mediaQuery.size.height / 2,
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage('assets/d.jpg'),
-                                fit: BoxFit.cover),
-                          ),
-                          child: Padding(
-                            padding: EdgeInsets.symmetric(horizontal: 25.w),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                RichText(
-                                  text: TextSpan(
-                                    text: 'Hello ',
+                  SingleChildScrollView(
+                    child: Column(
+                      children: [
+                        ClipPath(
+                          clipper: NativeClipper(),
+                          child: Container(
+                            width: double.infinity,
+                            height: 450.h,
+                            decoration: BoxDecoration(
+                              image: DecorationImage(
+                                  colorFilter: ColorFilter.mode(
+                                      kDarkBgColor.withOpacity(0.5),
+                                      BlendMode.darken),
+                                  image: const AssetImage('assets/d.jpg'),
+                                  fit: BoxFit.cover),
+                            ),
+                            child: Padding(
+                              padding: EdgeInsets.symmetric(horizontal: 25.w),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  RichText(
+                                    text: TextSpan(
+                                      text: 'Hello ',
+                                      style: TextStyle(
+                                          color: kWhiteColor,
+                                          fontFamily: 'roboto',
+                                          fontSize: 35.sp,
+                                          fontWeight: FontWeight.w100),
+                                      children: <TextSpan>[
+                                        TextSpan(
+                                            text: 'Newbie',
+                                            style: TextStyle(
+                                              fontSize: 35.sp,
+                                              fontWeight: FontWeight.w600,
+                                            )),
+                                      ],
+                                    ),
+                                  ),
+                                  Text(
+                                    'Enter your information below or\n login with other account',
                                     style: TextStyle(
-                                        color: kWhiteColor,
-                                        fontFamily: 'roboto',
-                                        fontSize: 35.sp,
+                                        color: kGreyColor,
+                                        fontSize: 20.sp,
                                         fontWeight: FontWeight.w100),
-                                    children: <TextSpan>[
-                                      TextSpan(
-                                          text: 'Newbie',
-                                          style: TextStyle(
-                                            fontSize: 35.sp,
-                                            fontWeight: FontWeight.w600,
-                                          )),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+                        Container(
+                          padding: kDefaultPadding,
+                          child: Column(
+                            children: [
+                              inputComponent('Email'),
+                              sizedHeight(10),
+                              inputComponent('Password'),
+                              sizedHeight(10),
+                              inputComponent('Password again'),
+                              sizedHeight(10),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                children: [
+                                  TextButton(
+                                      onPressed: () {},
+                                      child: Text(
+                                        'Forgot Password ? ',
+                                        style: TextStyle(
+                                            color: kPrimaryColor,
+                                            fontSize: 16.sp),
+                                      ))
+                                ],
+                              ),
+                              sizedHeight(20),
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Row(
+                                    children: [
+                                      badge(Icons.apple),
+                                      sizedWidth(10),
+                                      badge(Icons.facebook_sharp),
                                     ],
                                   ),
-                                ),
-                                Text(
-                                  'Enter your information below or\n login with other account',
-                                  style: TextStyle(
-                                      color: kGreyColor,
-                                      fontSize: 20.sp,
-                                      fontWeight: FontWeight.w100),
-                                ),
-                              ],
-                            ),
+                                  nextButton(
+                                      'Sign up',
+                                      (() =>
+                                          Get.to(const VerficationScreen()))),
+                                ],
+                              )
+                            ],
                           ),
                         ),
-                      ),
-                      Container(
-                        padding: kDefaultPadding,
-                        child: Column(
-                          children: [
-                            inputComponent('Email'),
-                            sizedHeight(20),
-                            inputComponent('Password'),
-                            sizedHeight(10),
-                            sizedHeight(20),
-                            inputComponent('Password again'),
-                            sizedHeight(10),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.end,
-                              children: [
-                                TextButton(
-                                    onPressed: () {},
-                                    child: Text(
-                                      'Forgot Password ? ',
-                                      style: TextStyle(
-                                          color: kPrimaryColor,
-                                          fontSize: 16.sp),
-                                    ))
-                              ],
-                            ),
-                            sizedHeight(20),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Row(
-                                  children: [
-                                    badge(Icons.apple),
-                                    sizedWidth(10),
-                                    badge(Icons.facebook_sharp),
-                                  ],
-                                ),
-                                nextButton('Sign up',
-                                    (() => Get.to(const VerficationScreen()))),
-                              ],
-                            )
-                          ],
-                        ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ]),
                 Column(
@@ -197,11 +207,11 @@ class AuthScreen extends StatelessWidget {
                           tabs: [
                             Text(
                               'Login',
-                              style: TextStyle(fontSize: 20.sp),
+                              style: TextStyle(fontSize: 18.sp),
                             ),
                             Text(
                               'Sign up',
-                              style: TextStyle(fontSize: 20.sp),
+                              style: TextStyle(fontSize: 18.sp),
                             ),
                           ]),
                     ),
@@ -212,10 +222,6 @@ class AuthScreen extends StatelessWidget {
           ),
         ),
       ),
-    
-    
-    
-    
     );
   }
 }

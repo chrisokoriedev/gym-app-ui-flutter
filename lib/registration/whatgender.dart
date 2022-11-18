@@ -27,9 +27,9 @@ class _GenderScreenState extends State<GenderScreen> {
                 sizedHeight(40),
                 registrationHeader('Tell us about yourself!',
                     'To give you a better experience we need\n to know your gender'),
-                sizedHeight(100),
+                sizedHeight(40),
                 chooseGender(Icons.male, 'Male', 1),
-                sizedHeight(30),
+                sizedHeight(20),
                 chooseGender(Icons.female, 'Female', 2),
                 const Spacer(),
                 Row(
@@ -53,7 +53,7 @@ class _GenderScreenState extends State<GenderScreen> {
         () => choosedGender = index,
       ),
       child: Container(
-        padding: EdgeInsets.all(30.sp),
+        padding: EdgeInsets.all(25.sp),
         decoration: BoxDecoration(
             shape: BoxShape.circle,
             color: (choosedGender == index) ? kPrimaryColor : kDarkBgColor),
@@ -61,7 +61,7 @@ class _GenderScreenState extends State<GenderScreen> {
           children: [
             Icon(
               iconData,
-              size: 90.sp,
+              size: 60.sp,
             ),
             Text(
               gender,

@@ -149,6 +149,7 @@ bottomSheet(PageController controller) {
 
 registrationHeader(String title, String des) {
   return Column(
+    crossAxisAlignment: CrossAxisAlignment.start,
     children: [
       Text(
         title,
@@ -177,7 +178,7 @@ nextButton(String title, VoidCallback press) {
         Text(
           title,
           style: TextStyle(
-              fontSize: 20.sp, fontWeight: FontWeight.w600, color: kWhiteColor),
+              fontSize: 18.sp, fontWeight: FontWeight.w600, color: kWhiteColor),
         ),
         Icon(
           Icons.arrow_forward_ios,

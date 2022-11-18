@@ -38,13 +38,13 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                   style: TextStyle(
                       color: kWhiteColor,
                       fontFamily: 'roboto',
-                      fontSize: 30.sp,
+                      fontSize: 25.sp,
                       fontWeight: FontWeight.w100),
                   children: <TextSpan>[
                     TextSpan(
                         text: 'Juliana,',
                         style: TextStyle(
-                          fontSize: 30.sp,
+                          fontSize: 25.sp,
                           fontWeight: FontWeight.w600,
                         )),
                   ],
@@ -52,7 +52,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
               ),
               Text(
                 'Good morning.',
-                style: TextStyle(color: kGreyColor, fontSize: 20.sp),
+                style: TextStyle(color: kGreyColor, fontSize: 18.sp),
               ),
               sizedHeight(30),
               Row(
@@ -83,7 +83,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                 ],
               ),
               SizedBox(
-                height: 40.h,
+                height: 50.h,
                 child: Container(
                   decoration: BoxDecoration(
                     color: kDarkBgColor,
